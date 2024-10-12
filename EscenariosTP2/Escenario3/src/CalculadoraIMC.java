@@ -1,7 +1,7 @@
-
+/**
+ * Clase que calcula el Índice de Masa Corporal (IMC) de una persona.
+ */
 public class CalculadoraIMC {
-
-    
     /** Método que calcula el IMC basado en peso (kg) y altura (m)
      * @param peso
      * @param altura

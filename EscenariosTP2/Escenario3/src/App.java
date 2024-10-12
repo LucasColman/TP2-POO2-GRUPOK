@@ -1,4 +1,6 @@
-
+/**
+ * Clase principal que contiene el método main para ejecutar el programa.
+ */
 public class App {
 
     public static void main(String[] args) {

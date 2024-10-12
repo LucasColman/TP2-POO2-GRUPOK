@@ -1,3 +1,6 @@
+/**
+ * Clase que muestra el uso de la anotación @Deprecated.
+ */
 public class Obsoleto{
     
     /**
@@ -7,7 +10,7 @@ public class Obsoleto{
     public void viejoMetodo() {
         System.out.println("Este método es obsoleto.");
     }
-
+    
     public void nuevoMetodo() {
         System.out.println("Este es el método nuevo.");
     }
