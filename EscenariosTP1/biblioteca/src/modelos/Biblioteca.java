@@ -31,6 +31,8 @@ public class Biblioteca {
      * @param usuarios La lista de usuarios registrados en la biblioteca.
      * @param libros   La lista de libros disponibles en la biblioteca.
      */
+
+     
     public Biblioteca(Usuario usuario, Libro libro, List<Usuario> usuarios, List<Libro> libros) {
         this.usuario = usuario;
         this.libro = libro;
