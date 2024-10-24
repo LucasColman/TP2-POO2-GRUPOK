@@ -26,8 +26,25 @@ Puntos clave a evaluar:
  */
 
 
-public class App {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-    }
-}
+ package cakefactory;
+
+ /**
+  * La clase principal que actúa como cliente en el patrón Template Method.
+  * Crea instancias de diferentes tipos de pasteles y llama al método makeCake()
+  * para ejecutar el proceso de fabricación.
+  */
+ public class App {
+     public static void main(String[] args) {
+         // Creando una instancia de ChocolateCake y VanillaCake
+         Cake chocolateCake = new ChocolateCake();
+         Cake vanillaCake = new VanillaCake();
+ 
+         // Fabricando los pasteles
+         System.out.println("Fabricando pastel de chocolate:");
+         chocolateCake.makeCake(); // Ejecuta el proceso de fabricación de pastel de chocolate
+ 
+         System.out.println("\nFabricando pastel de vainilla:");
+         vanillaCake.makeCake(); // Ejecuta el proceso de fabricación de pastel de vainilla
+     }
+ }
+ 
