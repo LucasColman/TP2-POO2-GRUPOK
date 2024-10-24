@@ -22,8 +22,50 @@ Puntos clave a evaluar:
      Diagrama de clases bien estructurado. 
  */
 
- public class App {
+import model.AdapterAudioPlayer;
+import model.IMusicPlayer;
+import model.MusicApp;
+import model.ThirdPartyAudioPlayer;
+
+ 
+
+/**
+ * Clase principal de la aplicación.
+ */
+public class App {
+
+    /**
+     * Método principal que ejecuta la aplicación.
+     *
+     * @param args Los argumentos de la línea de comandos.
+     * @throws Exception Si ocurre una excepción durante la ejecución.
+     */
     public static void main(String[] args) throws Exception {
-        System.out.println("Ejercicio 1: Patrón Adapter");
+
+        // Reproductor de música nativo
+        IMusicPlayer nativePlayer = new IMusicPlayer() {
+            @Override
+            public void playSong(String fileName) {
+                System.out.println("Reproduciendo audio desde MusicPlayer nativo: " + fileName);
+            }
+        };
+        
+         // Usando el reproductor externo a través del adaptador
+         ThirdPartyAudioPlayer thirdPartyAudioPlayer = new ThirdPartyAudioPlayer();
+
+         // Adaptador para el reproductor de música de terceros
+         IMusicPlayer adaptedPlayer = new AdapterAudioPlayer(thirdPartyAudioPlayer);
+ 
+         // Probamos la aplicación con el reproductor nativo
+         MusicApp appWithNativePlayer = new MusicApp(nativePlayer);
+ 
+         // Probamos la aplicación con el reproductor adaptado
+         MusicApp appWithAdaptedPlayer = new MusicApp(adaptedPlayer);
+ 
+         // Reproduciendo una canción con el reproductor nativo
+         appWithNativePlayer.playSong("cancion1.mp3");
+ 
+         // Reproduciendo una canción con el reproductor adaptado
+         appWithAdaptedPlayer.playSong("cancion2.wav");
     }
 }
