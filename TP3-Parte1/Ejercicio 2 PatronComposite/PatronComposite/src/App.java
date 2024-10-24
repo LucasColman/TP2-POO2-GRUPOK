@@ -22,9 +22,37 @@ Puntos clave a evaluar:
      Implementación de la recursividad para mostrar los detalles de los directorios y sus contenidos. 
      Diagrama de clases que refleje la jerarquía de objetos compuestos.  */
 
-
+import models.Directory;
+import models.File;
+/**
+ * Clase principal que actúa como cliente para crear una estructura jerárquica
+ * de directorios y archivos, y mostrar los detalles de esta estructura.
+ */
 public class App {
+    /**
+     * Método principal que crea la estructura de archivos y directorios,
+     * y muestra los detalles de la misma.
+     * 
+     * @param args Argumentos de la línea de comandos.
+     * @throws Exception Si ocurre algún error durante la ejecución.
+     */
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        // Crear archivos
+        File file1 = new File("file1.txt", 100);
+        File file2 = new File("file2.txt", 200);
+
+        // Crear directorios
+        Directory dir1 = new Directory("dir1");
+        Directory dir2 = new Directory("dir2");
+
+        // Agregar archivos y directorios a dir1
+        dir1.addComponent(file1);
+        dir1.addComponent(dir2);
+
+        // Agregar archivo a dir2
+        dir2.addComponent(file2);
+
+        // Mostrar detalles de la estructura
+        dir1.showDetails();
     }
 }
