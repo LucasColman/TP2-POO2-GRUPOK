@@ -14,10 +14,26 @@ Tareas:
 
  */
 
-
+import models.Cliente;
+import models.EnvioExpreso;
+import models.EnvioInternacional;
+import models.EnvioRegular;
 
 public class App {
+    /**
+    * Método principal para probar las diferentes estrategias de envío.
+    * @param args argumentos de la línea de comandos.
+    */    
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        Cliente cliente = new Cliente();
+
+        cliente.setEstrategia(new EnvioRegular());
+        System.out.println("Costo de Envío Regular: " + cliente.calcularCosto());
+
+        cliente.setEstrategia(new EnvioExpreso());
+        System.out.println("Costo de Envío Expreso: " + cliente.calcularCosto());
+
+        cliente.setEstrategia(new EnvioInternacional());
+        System.out.println("Costo de Envío Internacional: " + cliente.calcularCosto());
     }
 }
