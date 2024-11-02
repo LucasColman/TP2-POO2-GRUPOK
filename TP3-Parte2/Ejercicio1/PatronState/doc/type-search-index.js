@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"model","l":"SemaforoContext"},{"p":"model","l":"SemaforoEstado"},{"p":"model","l":"StateAmarillo"},{"p":"model","l":"StateRojo"},{"p":"model","l":"StateVerde"}];updateSearchResults();

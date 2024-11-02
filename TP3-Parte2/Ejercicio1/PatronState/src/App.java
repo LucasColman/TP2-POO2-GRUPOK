@@ -12,10 +12,15 @@ Tareas:
      Incluir un diagrama UML y el código en Java que represente la solución.
  */
 
-
+import model.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Ejercicio1dasdasdasd");
+        SemaforoContext semaforo = new SemaforoContext();
+
+        // Cambiar de estado 6 veces
+        for (int i = 0; i < 6; i++) {
+            semaforo.cambiarEstado();
+        }
     }
 }
