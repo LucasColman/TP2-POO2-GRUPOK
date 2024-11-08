@@ -18,16 +18,9 @@ public class GrupoForma implements FormaGeometrica {
     @Override
     public void dibujar() {
         System.out.println("Dibujando grupo de formas:");
+        
         for (FormaGeometrica forma : formas) {
             forma.dibujar();
-        }
-    }
-
-    @Override
-    public void mover(int x, int y) {
-        System.out.println("Moviendo grupo de formas a (" + x + ", " + y + ")");
-        for (FormaGeometrica forma : formas) {
-            forma.mover(x, y);
         }
     }
 }
