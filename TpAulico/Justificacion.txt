@@ -1,0 +1,2 @@
+Elegimos implementar el patrón de diseño Composite porqué con este podemos tratar los objetos tanto de forma individual como con grupos de objetos. 
+Con este patrón tenemos la ventaja de ser flexibles, simplicidad del código y con un fácil mantenimiento del mismo. 
